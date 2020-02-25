@@ -30,8 +30,12 @@ theme: jekyll-theme-hydeout
 plugins:
   - jekyll-feed
   - jekyll-paginate
+paginate: 5
 
-paginate:         5
+collections:
+  posts:
+    output: true
+    permalink: /:title
 
 
 # Exclude from processing.
