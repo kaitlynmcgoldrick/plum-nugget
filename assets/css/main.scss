@@ -1,0 +1,53 @@
+---
+---
+
+@charset 'UTF-8';
+@import 'hydeout';
+
+body {
+  background-color: cornflowerblue;
+  background-image: none;
+}
+
+.site-title a {
+  color: floralwhite;
+  font-size: smaller;
+  font-family: serif;
+}
+
+.me {
+  width: 8rem;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: initial;
+  -webkit-animation-iteration-count: initial;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform:     translateY(-5px);
+		transform:         translateY(-5px)
+	}
+	60% {
+		-webkit-transform: translateY(-2px);
+		-ms-transform:     translateY(-2px);
+		transform:         translateY(-2px)
+	}
+}
+
+.me:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
