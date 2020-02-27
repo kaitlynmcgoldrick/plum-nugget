@@ -4,15 +4,76 @@
 @charset 'UTF-8';
 @import 'hydeout';
 
+// VARIABLES <3 //
+
+$title-color: floralwhite;
+$sidebar-color: cornflowerblue;
+$post-title-color: #313131;
+$link-color: #268bd2;
+
+// MIXINS //
+
+@mixin pretty_underline($color, $background-color, $offset) {
+  text-shadow: 
+    0px -2px 0 $background-color,  0px -1px 0 $background-color,  0px 0px 0 $background-color,
+    2px -2px 0 $background-color,  2px -1px 0 $background-color,  2px 0px 0 $background-color,
+    -2px -2px 0 $background-color, -2px -1px 0 $background-color, -2px 0px 0 $background-color,
+    1px -2px 0 $background-color,  1px -1px 0 $background-color,  1px 0px 0 $background-color,
+    -1px -2px 0 $background-color, -1px -1px 0 $background-color, -1px 0px 0 $background-color,
+    0px -2px 0 $background-color,  0px -1px 0 $background-color,  0px 0px 0 $background-color;
+  box-shadow: 
+    0 -3px 0 0 $background-color inset, 
+    0 -3px 0 0 transparent inset;  
+  
+  transition-property: text-shadow, box-shadow;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
+  
+  &:hover {
+    transition: all .3s ease-out;
+    box-shadow:  0 (-4px + $offset) 0 0 $background-color inset, 0 (-6px + $offset) 0 0 $color inset;
+  }
+}
+
 body {
-  background-color: cornflowerblue;
+  background-color: $sidebar-color;
   background-image: none;
+  text-decoration: none;
+}
+
+h1.site-title {
+  line-height: 0.8;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+#sidebar a:hover, #sidebar a:focus {
+  text-decoration: none;
+}
+
+#sidebar .site-title a {
+  color: $title-color;
+
+  font-family: serif;
+
+  color: #ffffff;
+  font-size: 2.75rem;
+  line-height: 0.8;
 }
 
 .site-title a {
-  color: floralwhite;
-  font-size: smaller;
-  font-family: serif;
+  font-size: 2.75rem;
+  @include pretty_underline($title-color, $sidebar-color, -3.5px);
+}
+
+.post-title a {
+  @include pretty_underline($post-title-color, white, 0);
+}
+
+a {
+  @include pretty_underline($link-color, white, 3px);
 }
 
 .me {
@@ -27,6 +88,14 @@ body {
   animation-iteration-count: initial;
   -webkit-animation-iteration-count: initial;
 }
+
+.me:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+// KEY FRAMES //
 
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {
@@ -44,10 +113,4 @@ body {
 		-ms-transform:     translateY(-2px);
 		transform:         translateY(-2px)
 	}
-}
-
-.me:hover {
-  cursor: pointer;
-  animation-name: bounce;
-  -moz-animation-name: bounce;
 }

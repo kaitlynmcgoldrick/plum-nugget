@@ -1,14 +1,14 @@
 <div id="sidebar">
   <header>
     <img class="me transition" src="../assets/images/me-square.jpg" />
-    <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
+    <h1 class="site-title">
       <a href="{{ "/" | relative_url }}">
         {% unless page.url == "/" %}
         <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
         {% endunless %}
         {{ site.title }}
       </a>
-    </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
+    </h1>
     <p class="lead">{{ site.description }}</p>
   </header>
   {% include sidebar-nav-links.html %}
