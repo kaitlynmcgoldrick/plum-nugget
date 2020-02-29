@@ -72,7 +72,7 @@ a:hover, a:focus {
   @include pretty_underline($post-title-color, white, 0);
 }
 
-a {
+.content a {
   @include pretty_underline($link-color, white, 3px);
 }
 
@@ -93,6 +93,10 @@ a {
   cursor: pointer;
   animation-name: bounce;
   -moz-animation-name: bounce;
+}
+
+.sidebar-icons {
+  font-size: 40px;
 }
 
 // KEY FRAMES //
