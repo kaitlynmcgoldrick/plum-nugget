@@ -3,10 +3,11 @@
     <img class="me transition" src="../assets/images/me-square.jpg" />
     <h1 class="site-title">
       <a href="{{ "/" | relative_url }}">
-        {% unless page.url == "/" %}
-        <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
-        {% endunless %}
+        {% if page.url == "/" %}
         {{ site.title }}
+        {% else %}
+        <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span> Home
+        {% endif %}
       </a>
     </h1>
     <p class="lead">{{ site.description }}</p>

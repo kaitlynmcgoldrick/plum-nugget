@@ -10,6 +10,7 @@ $title-color: floralwhite;
 $sidebar-color: cornflowerblue;
 $post-title-color: #313131;
 $link-color: #268bd2;
+$mobile-width: 768px;
 
 // MIXINS //
 
@@ -66,6 +67,12 @@ a:hover, a:focus {
 .site-title a {
   font-size: 2.75rem;
   @include pretty_underline($title-color, $sidebar-color, -3.5px);
+
+  @media only screen and (max-width: $mobile-width) {
+    &:hover {
+      box-shadow:  none;
+    }
+  }
 }
 
 .content a {
@@ -87,6 +94,10 @@ a:hover, a:focus {
   animation-timing-function: ease-in-out;
   animation-iteration-count: initial;
   -webkit-animation-iteration-count: initial;
+
+  @media only screen and (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .me:hover {
