@@ -68,12 +68,12 @@ a:hover, a:focus {
   @include pretty_underline($title-color, $sidebar-color, -3.5px);
 }
 
-.post-title a {
-  @include pretty_underline($post-title-color, white, 0);
-}
-
 .content a {
   @include pretty_underline($link-color, white, 3px);
+}
+
+.post-title a {
+  @include pretty_underline($post-title-color, white, 0);
 }
 
 .me {
