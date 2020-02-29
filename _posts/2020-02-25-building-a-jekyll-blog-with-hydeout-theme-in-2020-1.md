@@ -5,10 +5,13 @@ tags: ''
 category: ''
 date: 2020-02-25T03:25:47.979Z
 summary: ''
+excerpt_separator: "<!--more-->"
 ---
 Obligatory build a blog site to write a blog post about how you built the blog site. 
 
 With Gatsby gaining popularity, I decided to go against the grain and try out Jekyll, a popular static site generator written in Ruby. Jekyll is like the kid who used to be cool but was abandoned once the cool new kid, Gatsby, came to town. So I thought I'd give it a chance. I think it's important to understand a bit of old tech to fully understand why the bright and shiny new tech was built and what pain points it was meant to solve. 
+
+<!--more-->
 
 Getting the site up and running was quite straightforward especially considering I had no previous experience with Jekyll whatsoever. 
 

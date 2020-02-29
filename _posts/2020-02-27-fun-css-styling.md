@@ -5,6 +5,7 @@ tags: CSS
 category: CSS
 date: 2020-02-27T14:25:58.983Z
 summary: CSS
+excerpt_separator: ''
 ---
 ```
 a {
