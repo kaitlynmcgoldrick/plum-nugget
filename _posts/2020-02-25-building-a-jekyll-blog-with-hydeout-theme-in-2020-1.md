@@ -1,10 +1,10 @@
 ---
 title: Building a Jekyll Blog with Hydeout Theme in 2020!
 layout: post
-tags: dde
-category: eee
+tags: ''
+category: ''
 date: 2020-02-25T03:25:47.979Z
-summary: eee
+summary: ''
 ---
 Obligatory build a blog site to write a blog post about how you built the blog site. 
 
